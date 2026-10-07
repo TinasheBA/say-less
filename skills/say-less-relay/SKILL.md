@@ -10,7 +10,7 @@ People lose time when they stop their own work to explain a problem in Teams or 
 ## Requirements
 
 - The `humanizer` skill.
-- A Playwright MCP server with a browser profile that is already signed in to Teams web.
+- A Playwright MCP server with a browser profile that is already signed in to Teams web. It must run headless (`--headless` in its args). Every browser this skill starts, MCP or script, runs headless. No window may open on the user's machine. If the MCP opens a visible window, stop and tell the user to add `--headless`; do not carry on headed.
 - The Azure CLI with the `azure-devops` extension, and a PAT in the environment variable `AZURE_DEVOPS_EXT_PAT`. The PAT needs Work Items (Read & Write).
 - `relay-config.md` in this skill's folder. Copy `relay-config.example.md` and fill it in. Never commit the filled-in file.
 
